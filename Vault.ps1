@@ -94,8 +94,8 @@ function Start-MoveFiles() {
   $Items = Get-ChildItem -Path "$($P_PathSRC)" -Recurse -Exclude ( Get-Content "$($P_FileEXC)" )
     | Where-Object {
         ( -not $_.PSIsContainer ) `
-        -and ( $_.CreationTime -le ( Get-Date ).AddSeconds( -$($P_CreationTime) ) ) `
-        -and ( $_.LastWriteTime -le ( Get-Date ).AddSeconds( -$($P_LastWriteTime) ) )
+        -and ( $_.CreationTime -gt ( Get-Date ).AddSeconds( -$($P_CreationTime) ) ) `
+        -and ( $_.LastWriteTime -gt ( Get-Date ).AddSeconds( -$($P_LastWriteTime) ) )
       }
     | Where-Object {
         ( $_.Length -ge "$($P_FileSize)" )
@@ -146,8 +146,8 @@ function Start-RemoveDirs() {
   $Items = Get-ChildItem -Path "$($P_PathSRC)" -Recurse
     | Where-Object {
         ( $_.PSIsContainer ) `
-        -and ( $_.CreationTime -le ( Get-Date ).AddSeconds( -$($P_CreationTime) ) ) `
-        -and ( $_.LastWriteTime -le ( Get-Date ).AddSeconds( -$($P_LastWriteTime) ) ) `
+        -and ( $_.CreationTime -gt ( Get-Date ).AddSeconds( -$($P_CreationTime) ) ) `
+        -and ( $_.LastWriteTime -gt ( Get-Date ).AddSeconds( -$($P_LastWriteTime) ) ) `
       }
 
   if ( -not $Items ) { Write-VaultMsg -T "I" -M "Directories not found!" }
