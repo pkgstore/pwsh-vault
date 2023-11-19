@@ -5,7 +5,7 @@ A script for transferring and saving files to Vault (storage directory), while m
 ## Install
 
 ```powershell
-Install-CustomModule -Name 'Vault' -GitHubPath 'pkgstore/pwsh-vault'
+Install-CustomModule -N 'Vault' -GHP 'pkgstore/pwsh-vault'
 ```
 
 ## Syntax
