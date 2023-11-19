@@ -1,5 +1,5 @@
 function Compress-VaultData() {
-  param (
+  param(
     [Alias('P')][string]$Path,
     [Alias('N')][string]$Name,
     [Alias('O')][switch]$Overwrite

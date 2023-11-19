@@ -1,5 +1,5 @@
 function Start-VaultRemoveDirs() {
-  param (
+  param(
     [string]$Source,
     [long]$CreationTime,
     [long]$LastWriteTime,

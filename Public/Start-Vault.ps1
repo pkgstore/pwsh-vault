@@ -1,5 +1,5 @@
 function Start-Vault {
-  Param(
+  param(
     [Parameter(HelpMessage="Script operation mode. Default: 'MV'.")]
     [ValidateSet('CP', 'MV', 'RM')]
     [Alias('M')][string]$Mode = 'MV',

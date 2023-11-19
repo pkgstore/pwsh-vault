@@ -1,5 +1,5 @@
 function Start-VaultMoveFiles() {
-  param (
+  param(
     [string]$Mode,
     [string]$Source,
     [string]$Vault,
