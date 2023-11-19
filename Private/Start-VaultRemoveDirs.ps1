@@ -1,4 +1,12 @@
 function Start-VaultRemoveDirs() {
+  <#
+    .SYNOPSIS
+    Removing directories.
+
+    .DESCRIPTION
+    Removing empty directories in the Source.
+  #>
+
   param(
     [string]$Source,
     [long]$CreationTime,

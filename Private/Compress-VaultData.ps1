@@ -1,4 +1,12 @@
 function Compress-VaultData() {
+  <#
+    .SYNOPSIS
+    Compressing data.
+
+    .DESCRIPTION
+    Compressing the Vault data with compression level 9.
+  #>
+
   param(
     [Alias('P')][string]$Path,
     [Alias('N')][string]$Name,

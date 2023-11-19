@@ -1,4 +1,12 @@
 function Start-VaultMoveFiles() {
+  <#
+    .SYNOPSIS
+    Moving files.
+
+    .DESCRIPTION
+    Moving files from the Source to the Vault.
+  #>
+
   param(
     [string]$Mode,
     [string]$Source,
